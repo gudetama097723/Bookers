@@ -1,0 +1,362 @@
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-09 03:40:42.373472', '2026-04-09 03:40:42.373476') RETURNING "key" /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Migrating to CreateBooks (20260409030702)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Bookers1'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260409030702') RETURNING "version" /*application='Bookers1'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Migrating to AddNameToBook (20260409034640)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Bookers1'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "books" ADD "name" varchar /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260409034640') RETURNING "version" /*application='Bookers1'*/[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Migrating to RemoveNameToBook (20260409034824)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260409034824') RETURNING "version" /*application='Bookers1'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Migrating to RemoveNameFromBooks (20260409035446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Bookers1'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='Bookers1'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='Bookers1'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abooks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar) /*application='Bookers1'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "abooks" ("id","title","body","created_at","updated_at","name")
+                     SELECT "id","title","body","created_at","updated_at","name" FROM "books" /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "books" /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "books" ("id","title","body","created_at","updated_at")
+                     SELECT "id","title","body","created_at","updated_at" FROM "abooks" /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "abooks" /*application='Bookers1'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260409035446') RETURNING "version" /*application='Bookers1'*/[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" /*application='Bookers1'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20260409035446) /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20260409030702); /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-09 04:02:55.969531', '2026-04-09 04:02:55.969535') RETURNING "key" /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f707e86358e0b6ce61ae39fc6c81f952d4bd2afa', '2026-04-09 04:02:55.974585', '2026-04-09 04:02:55.974588') RETURNING "key" /*application='Bookers1'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" /*application='Bookers1'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20260409035446) /*application='Bookers1'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20260409030702); /*application='Bookers1'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-09 04:02:56.009404', '2026-04-09 04:02:56.009408') RETURNING "key" /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2026-04-09 04:02:56.011633' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f707e86358e0b6ce61ae39fc6c81f952d4bd2afa', '2026-04-09 04:02:56.013532', '2026-04-09 04:02:56.013534') RETURNING "key" /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-04-09 04:26:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 127ms (Views: 42.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 28.4ms)
+
+
+Started GET "/homes/top" for 127.0.0.1 at 2026-04-09 04:27:01 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | GC: 0.9ms)
+Completed 200 OK in 55ms (Views: 18.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/homes/top" for 127.0.0.1 at 2026-04-09 04:38:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/homes/top"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-04-09 04:38:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/top" for 127.0.0.1 at 2026-04-09 04:38:10 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-09 08:17:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 29.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-09 08:17:36 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2026-04-09 08:17:47 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2026-04-09 08:17:55 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/index" for 127.0.0.1 at 2026-04-09 08:18:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/books" for 127.0.0.1 at 2026-04-09 08:20:46 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-09 08:39:59 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.7ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-09 08:40:10 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.3ms)
+Completed 200 OK in 14ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 08:40:11 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:14:23 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.8ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:14:34 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:15:14 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 3.5ms)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:47:16 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 21.3ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | GC: 0.2ms)
+Completed 200 OK in 34ms (Views: 22.8ms | ActiveRecord: 1.8ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:48:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 8.1ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.4ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 09:50:52 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 6.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 9.0ms | ActiveRecord: 1.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:17:54 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    4: 
+    5: <h2>新規投稿</h2>
+    6: 
+    7: <%= form_with model: @book do |f| %>
+    8: 
+    9:   <p>本のタイトル</p>
+   10:   <%= f.text_field :title %>
+  
+app/views/books/index.html.erb:7
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/books/index.html.erb:7
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:19:40 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.8ms)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:22:36 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    3: 
+    4: 
+    5: <h2>新規投稿</h2>
+    6: <%= form_with model: @book do |f| %>
+    7: 
+    8:   <p>本のタイトル</p>
+    9:   <%= f.text_field :title %>
+  
+app/views/books/index.html.erb:6
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/books/index.html.erb:6
+Started POST "/__web_console/repl_sessions/90213e271fc2474fda9af1ad9d743b53/trace" for 127.0.0.1 at 2026-04-09 10:23:47 +0000
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:25:49 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    3: 
+    4: 
+    5: <h2>新規投稿</h2>
+    6: <%= form_with model: @book do |f| %>
+    7: 
+    8:   <p>本のタイトル</p>
+    9:   <%= f.text_field :title %>
+  
+app/views/books/index.html.erb:6
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/books/index.html.erb:6
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:27:58 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 4.4ms | GC: 2.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 9.0ms)
+Completed 200 OK in 40ms (Views: 16.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 21.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 10:48:53 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.1ms)
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-09 11:06:15 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+

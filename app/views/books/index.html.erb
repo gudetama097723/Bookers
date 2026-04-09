@@ -1,0 +1,16 @@
+<h1>投稿一覧</h1>
+<th>本のタイトル</th><th>内容</th>
+
+
+<h2>新規投稿</h2>
+<%= form_with model: @book do |f| %>
+
+  <p>本のタイトル</p>
+  <%= f.text_field :title %>
+
+<p>内容</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit "本を投稿" %>
+
+<% end %>
