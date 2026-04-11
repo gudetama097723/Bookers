@@ -6,7 +6,7 @@
 <th>本のタイトル</th>
 <th>感想</th>
 <th></th>
-<tr>
+</tr>
 </thead>
 
 <tbody>
@@ -22,10 +22,20 @@
 
 <% end %>
 </tbody>
-<table>
+</table>
 
 
 <h2>新規投稿</h2>
+<%if @book.errors.any? %>
+  <%= @book.errors.count %>error prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
 <%= form_with model: @book do |f| %>
 
   <p>本のタイトル</p>

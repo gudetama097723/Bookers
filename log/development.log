@@ -2937,3 +2937,2553 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2026-04-11 05:27:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | GC: 0.0ms)
+Completed 200 OK in 77ms (Views: 32.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:27:10 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 6.9ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 05:39:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 16.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:39:07 +0000
+Processing by BooksController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `balidates' for class Book):
+  
+app/models/book.rb:3:in `<class:Book>'
+app/models/book.rb:1:in `<main>'
+app/controllers/books_controller.rb:7:in `index'
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:40:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.4ms)
+Completed 200 OK in 35ms (Views: 9.2ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 5.9ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:40:04 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"", "body"=>""}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 15ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 05:40:08 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:40:09 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:40:35 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:40:36 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"", "body"=>""}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 11ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 05:40:38 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 05:40:39 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:40:40 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 8.8ms | GC: 6.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 6.1ms)
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 6.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:40:57 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 05:41:18 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started PATCH "/books/7" for 127.0.0.1 at 2026-04-11 05:41:20 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"タイトルが長い"}, "commit"=>"更新", "id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Redirected to http://127.0.0.1:8080/books/7
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 05:41:20 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:41:21 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:42:38 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.2ms)
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:42:45 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 05:42:45.445646', '2026-04-11 05:42:45.445646') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 19ms (ActiveRecord: 5.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:42:45 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/9?_method=delete" for 127.0.0.1 at 2026-04-11 05:42:48 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 9 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (0.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 9 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:42:48 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:42:58 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:43:04 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"てすと", "body"=>"てすと"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (7.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'てすと', '2026-04-11 05:43:04.225815', '2026-04-11 05:43:04.225815') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 20ms (ActiveRecord: 14.2ms (1 query, 0 cached) | GC: 6.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:43:04 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.6ms)
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started DELETE "/books/10?_method=delete" for 127.0.0.1 at 2026-04-11 05:43:15 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 10 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 10 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:43:15 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/8/edit" for 127.0.0.1 at 2026-04-11 05:43:16 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:46:29 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.2ms)
+Completed 200 OK in 22ms (Views: 6.7ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:46:34 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"てすと", "body"=>"てすと"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'てすと', '2026-04-11 05:46:34.502155', '2026-04-11 05:46:34.502155') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 17ms (ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:46:34 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 10.6ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.5ms)
+Completed 200 OK in 41ms (Views: 16.0ms | ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:50:05 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"てすと", "body"=>"てすと"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'てすと', '2026-04-11 05:50:05.470485', '2026-04-11 05:50:05.470485') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 19ms (ActiveRecord: 5.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:05 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started DELETE "/books/11?_method=delete" for 127.0.0.1 at 2026-04-11 05:50:20 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 11 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 11 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:20 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/12?_method=delete" for 127.0.0.1 at 2026-04-11 05:50:22 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 12 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 12 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:22 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 6.7ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 3.9ms)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+Started DELETE "/books/8?_method=delete" for 127.0.0.1 at 2026-04-11 05:50:26 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 8 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 15ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:26 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/7?_method=delete" for 127.0.0.1 at 2026-04-11 05:50:28 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 7 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 15ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:28 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:45 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:50:48 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 05:50:48.875247', '2026-04-11 05:50:48.875247') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:50:48 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:58:54 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.3ms)
+Completed 200 OK in 21ms (Views: 7.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books/13/edit" for 127.0.0.1 at 2026-04-11 05:58:57 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 13 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/13?_method=delete" for 127.0.0.1 at 2026-04-11 05:58:58 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 13 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 13 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 17ms (ActiveRecord: 4.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:58:58 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:59:02 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (3.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 05:59:02.345608', '2026-04-11 05:59:02.345608') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 27ms (ActiveRecord: 3.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:02 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.4ms)
+Completed 200 OK in 23ms (Views: 5.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:59:07 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 05:59:07.101598', '2026-04-11 05:59:07.101598') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:07 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 05:59:10 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"あ", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('あ', 'あ', '2026-04-11 05:59:10.522926', '2026-04-11 05:59:10.522926') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:10 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 5.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started DELETE "/books/16?_method=delete" for 127.0.0.1 at 2026-04-11 05:59:12 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"16"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 16 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (0.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 16 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:12 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started DELETE "/books/14?_method=delete" for 127.0.0.1 at 2026-04-11 05:59:14 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"14"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 14 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 14 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:14 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/15?_method=delete" for 127.0.0.1 at 2026-04-11 05:59:16 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"15"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 15 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (1.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 15 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 05:59:16 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 5.9ms | GC: 3.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 3.5ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:00:58 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 22ms (Views: 6.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:01:07 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"ｓ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'ｓ', '2026-04-11 06:01:07.244226', '2026-04-11 06:01:07.244226') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 17ms (ActiveRecord: 5.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:01:07 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:01:13 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'あ', '2026-04-11 06:01:13.622135', '2026-04-11 06:01:13.622135') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:01:13 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 9.2ms | GC: 6.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 6.3ms)
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 7.9ms)
+
+
+Started DELETE "/books/17?_method=delete" for 127.0.0.1 at 2026-04-11 06:01:21 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"17"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 17 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (4.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 17 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 33ms (ActiveRecord: 4.7ms (2 queries, 0 cached) | GC: 16.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:01:21 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/18?_method=delete" for 127.0.0.1 at 2026-04-11 06:01:23 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 18 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 18 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:01:23 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.6ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:07:56 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<table>
+
+<tr>
+<th>本のタイトル</th>
+<th>感想</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<% @books.each do |book| %>
+
+<tr>
+<td><p><%= book.title %></p></td>
+<td><p><%= book.body %></p></td>
+<td colspan="3"><%= link_to "閲覧", book_path(book.id) %></td>
+<td><%= link_to "編集", edit_book_path(book.id) %></td>
+<td><%= link_to "削除", book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></td>
+</tr>
+
+<% end %>
+</tbody>
+</table>
+
+
+<h2>新規投稿</h2>
+<%if @book.errprs.any? %>
+  <%= @book.errors.count %>error prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messeges.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  </ul>
+
+
+<%= form_with model: @book do |f| %>
+
+  <p>本のタイトル</p>
+  <%= f.text_field :title %>
+
+  <p>感想</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit "本を投稿" %>
+
+<% end %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:51: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<table>
+
+<tr>
+<th>本のタイトル</th>
+<th>感想</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<% @books.each do |book| %>
+
+<tr>
+<td><p><%= book.title %></p></td>
+<td><p><%= book.body %></p></td>
+<td colspan="3"><%= link_to "閲覧", book_path(book.id) %></td>
+<td><%= link_to "編集", edit_book_path(book.id) %></td>
+<td><%= link_to "削除", book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></td>
+</tr>
+
+<% end %>
+</tbody>
+</table>
+
+
+<h2>新規投稿</h2>
+<%if @book.errprs.any? %>
+  <%= @book.errors.count %>error prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messeges.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  </ul>
+
+
+<%= form_with model: @book do |f| %>
+
+  <p>本のタイトル</p>
+  <%= f.text_field :title %>
+
+  <p>感想</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit "本を投稿" %>
+
+<% end %>
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <table>
+4:    
+5:    <tr>
+6:    <th>本のタイトル</th>
+7:    <th>感想</th>
+8:    <th></th>
+9:    </tr>
+10:    </thead>
+11:    
+12:    <tbody>
+13:    <% @books.each do |book| %>
+14:    
+15:    <tr>
+16:    <td><p><%= book.title %></p></td>
+17:    <td><p><%= book.body %></p></td>
+18:    <td colspan="3"><%= link_to "閲覧", book_path(book.id) %></td>
+19:    <td><%= link_to "編集", edit_book_path(book.id) %></td>
+20:    <td><%= link_to "削除", book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></td>
+21:    </tr>
+22:    
+23:    <% end %>
+24:    </tbody>
+25:    </table>
+26:    
+27:    
+28:    <h2>新規投稿</h2>
+29:    <%if @book.errprs.any? %>
+30:      <%= @book.errors.count %>error prohibited this book from being saved:
+31:      <ul>
+32:        <% @book.errors.full_messeges.each do |message|%>
+33:          <li><%= message %></li>
+34:        <% end %>
+35:      </ul>
+36:      </ul>
+37:    
+38:    
+39:    <%= form_with model: @book do |f| %>
+40:    
+41:      <p>本のタイトル</p>
+42:      <%= f.text_field :title %>
+43:    
+44:      <p>感想</p>
+45:      <%= f.text_area :body %>
+46:    
+47:      <%= f.submit "本を投稿" %>
+48:    
+49:    <% end %>
+  
+app/views/books/index.html.erb:51: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/controllers/books_controller.rb:17:in `create'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:51: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+):
+  
+app/views/books/index.html.erb:51: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/controllers/books_controller.rb:17:in `create'
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:08:20 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errprs' for an instance of Book)
+Caused by: NoMethodError (undefined method `errprs' for an instance of Book)
+
+Information for: ActionView::Template::Error (undefined method `errprs' for an instance of Book):
+    26: 
+    27: 
+    28: <h2>新規投稿</h2>
+    29: <%if @book.errprs.any? %>
+    30:   <%= @book.errors.count %>error prohibited this book from being saved:
+    31:   <ul>
+    32:     <% @book.errors.full_messeges.each do |message|%>
+  
+app/views/books/index.html.erb:29
+
+Information for cause: NoMethodError (undefined method `errprs' for an instance of Book):
+  
+app/views/books/index.html.erb:29
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:08:36 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.3ms)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:08:37 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 1.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_messeges' for an instance of ActiveModel::Errors)
+Caused by: NoMethodError (undefined method `full_messeges' for an instance of ActiveModel::Errors)
+
+Information for: ActionView::Template::Error (undefined method `full_messeges' for an instance of ActiveModel::Errors):
+    29: <%if @book.errors.any? %>
+    30:   <%= @book.errors.count %>error prohibited this book from being saved:
+    31:   <ul>
+    32:     <% @book.errors.full_messeges.each do |message|%>
+    33:       <li><%= message %></li>
+    34:     <% end %>
+    35:   </ul>
+  
+app/views/books/index.html.erb:32
+app/controllers/books_controller.rb:17:in `create'
+
+Information for cause: NoMethodError (undefined method `full_messeges' for an instance of ActiveModel::Errors):
+  
+app/views/books/index.html.erb:32
+app/controllers/books_controller.rb:17:in `create'
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:10:08 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:10:09 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 15ms (Views: 4.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 06:10:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:11:02 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 06:11:02.780561', '2026-04-11 06:11:02.780561') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 17ms (ActiveRecord: 4.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:11:02 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:11:05 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/19?_method=delete" for 127.0.0.1 at 2026-04-11 06:11:08 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 19 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 19 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:37:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:11:08 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:12:16 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 1.5ms)
+Completed 422 Unprocessable Content in 16ms (Views: 5.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:12:19 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 3.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:12:20 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 3.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:14:54 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', 'あ', '2026-04-11 06:14:54.124225', '2026-04-11 06:14:54.124225') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:14:54 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 6.4ms)
+Completed 200 OK in 21ms (Views: 10.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 6.4ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:14:56 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:14:59 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:14:59 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:15:02 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 13.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 20.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:15:03 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 4.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:15:04 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:15:06 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:19:37 +0000
+  
+SyntaxError (/home/ubuntu/environment/Bookers1/app/controllers/books_controller.rb:49: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/books_controller.rb:49: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:19:48 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 4.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 06:19:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:19:50 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:31:in `update'
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:01 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 13.9ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 06:20:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:03 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:32:in `update'
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:29 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.5ms)
+Completed 200 OK in 23ms (Views: 5.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 06:20:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:30 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:20:30 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:20:32 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:20:33 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:34 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:36 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:20:36 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:20:37 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:38 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:20:39 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:40 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:20:42 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:20:42 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:48 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:50 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:51 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:51 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 17ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:51 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:51 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:52 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:52 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.8ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 1.2ms)
+Completed 422 Unprocessable Content in 16ms (Views: 5.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:52 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:52 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:52 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:53 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:53 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.6ms)
+Completed 422 Unprocessable Content in 14ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:53 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:53 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:54 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:54 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 15ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:20:59 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mBook Update (1.1ms)[0m  [1m[33mUPDATE "books" SET "title" = 'ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド', "updated_at" = '2026-04-11 06:20:59.478070' WHERE "books"."id" = 20 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 18ms (ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:20:59 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:21:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:21:00 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:21:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.7ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:21:02 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:21:04 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:21:04 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:21:06 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:21:06 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:21:06 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:21:07 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:21:09 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:22:04 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"あ"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:22:04 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:22:05 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:22:06 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:22:07 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:22:22 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 14ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:22:33 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"て"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mBook Update (1.1ms)[0m  [1m[33mUPDATE "books" SET "title" = 'てすと', "body" = 'て', "updated_at" = '2026-04-11 06:22:33.024419' WHERE "books"."id" = 20 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 18ms (ActiveRecord: 4.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:22:33 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:22:34 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.6ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:23:42 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:24:33 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"本を投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.4ms)
+Completed 422 Unprocessable Content in 15ms (Views: 4.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:33:19 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/20" for 127.0.0.1 at 2026-04-11 06:33:21 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"て"}, "commit"=>"更新", "id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:8080/books/20
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:33:21 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:33:22 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.5ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:33:27 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"あ", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('あ', 'あ', '2026-04-11 06:33:27.998088', '2026-04-11 06:33:27.998088') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books.21
+Completed 302 Found in 18ms (ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books.21" for 127.0.0.1 at 2026-04-11 06:33:28 +0000
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books.21" for 127.0.0.1 at 2026-04-11 06:36:38 +0000
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 4.3ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.6ms)
+Completed 200 OK in 27ms (Views: 7.6ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 06:36:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/books/20/edit" for 127.0.0.1 at 2026-04-11 06:36:40 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 6.3ms | GC: 4.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 4.5ms)
+Completed 200 OK in 18ms (Views: 7.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:36:46 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"てすと"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'てすと', '2026-04-11 06:36:46.455511', '2026-04-11 06:36:46.455511') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books.22
+Completed 302 Found in 19ms (ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books.22" for 127.0.0.1 at 2026-04-11 06:36:46 +0000
+Processing by BooksController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/20" for 127.0.0.1 at 2026-04-11 06:38:07 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:38:08 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.4ms)
+Completed 200 OK in 14ms (Views: 4.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/22" for 127.0.0.1 at 2026-04-11 06:38:12 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 22 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:41:20 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"て"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'て', '2026-04-11 06:41:20.137690', '2026-04-11 06:41:20.137690') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books/23
+Completed 302 Found in 23ms (ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/23" for 127.0.0.1 at 2026-04-11 06:41:20 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 23 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.2ms)
+Completed 200 OK in 16ms (Views: 4.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books/23/edit" for 127.0.0.1 at 2026-04-11 06:41:23 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 23 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:41:39 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 6.1ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 2.6ms)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.6ms)
+
+
+Started GET "/books/23/edit" for 127.0.0.1 at 2026-04-11 06:41:42 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 23 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.4ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 1.3ms)
+Completed 200 OK in 16ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/books/23" for 127.0.0.1 at 2026-04-11 06:41:43 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 23 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 1.5ms)
+Completed 200 OK in 17ms (Views: 4.3ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 5.0ms)
+
+
+Started DELETE "/books/23?_method=delete" for 127.0.0.1 at 2026-04-11 06:41:44 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 23 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mBook Destroy (6.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 23 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 38ms (ActiveRecord: 6.8ms (2 queries, 0 cached) | GC: 24.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:41:44 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/22?_method=delete" for 127.0.0.1 at 2026-04-11 06:41:46 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"22"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 22 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 22 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:41:46 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started DELETE "/books/21?_method=delete" for 127.0.0.1 at 2026-04-11 06:41:47 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 21 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 21 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:41:47 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started DELETE "/books/20?_method=delete" for 127.0.0.1 at 2026-04-11 06:41:48 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 20 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mBook Destroy (1.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 20 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:41:48 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:44:04 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"あ"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('てすと', 'あ', '2026-04-11 06:44:04.819191', '2026-04-11 06:44:04.819191') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books/24
+Completed 302 Found in 25ms (ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books/24" for 127.0.0.1 at 2026-04-11 06:44:04 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"24"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 24 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:44:10 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/24/edit" for 127.0.0.1 at 2026-04-11 06:44:11 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 24 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/24" for 127.0.0.1 at 2026-04-11 06:48:43 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"てすと", "body"=>"い"}, "commit"=>"更新", "id"=>"24"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 24 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:32:in `update'
+  [1m[36mBook Update (1.7ms)[0m  [1m[33mUPDATE "books" SET "body" = 'い', "updated_at" = '2026-04-11 06:48:43.715484' WHERE "books"."id" = 24 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:32:in `update'
+Redirected to http://127.0.0.1:8080/books/24
+Completed 302 Found in 24ms (ActiveRecord: 6.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/24" for 127.0.0.1 at 2026-04-11 06:48:43 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"24"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 24 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 6.2ms | GC: 4.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 4.5ms)
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:48:45 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/24?_method=delete" for 127.0.0.1 at 2026-04-11 06:49:29 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"24"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 24 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:42:in `destroy'
+  [1m[36mBook Destroy (0.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 24 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:42:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 23ms (ActiveRecord: 5.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:49:29 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 06:49:35 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"大好き"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', '大好き', '2026-04-11 06:49:35.434260', '2026-04-11 06:49:35.434260') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:8080/books/25
+Completed 302 Found in 14ms (ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/25" for 127.0.0.1 at 2026-04-11 06:49:35 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"25"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 25 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:49:36 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 4.5ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+Started GET "/books/25/edit" for 127.0.0.1 at 2026-04-11 06:49:39 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 25 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/25" for 127.0.0.1 at 2026-04-11 06:49:41 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"大好き"}, "commit"=>"更新", "id"=>"25"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 25 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:8080/books/25
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/25" for 127.0.0.1 at 2026-04-11 06:49:41 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"25"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 25 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 06:49:43 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
