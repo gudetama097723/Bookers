@@ -15,9 +15,9 @@
 <tr>
 <td><p><%= book.title %></p></td>
 <td><p><%= book.body %></p></td>
-<td colspan="3"><%= link_to "閲覧", book_path(book.id) %></td>
-<td><%= link_to "編集", edit_book_path(book.id) %></td>
-<td><%= link_to "削除", book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></td>
+<td colspan="3"><%= link_to "Show", book_path(book.id) %></td>
+<td><%= link_to "Edit", edit_book_path(book.id) %></td>
+<td><%= link_to "Destroy", book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></td>
 </tr>
 
 <% end %>
@@ -44,6 +44,6 @@
   <p>感想</p>
   <%= f.text_area :body %>
 
-  <%= f.submit "本を投稿" %>
+  <%= f.submit "Create Book" %>
 
 <% end %>
