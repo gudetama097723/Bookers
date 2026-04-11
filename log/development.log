@@ -728,3 +728,2212 @@ Processing by BooksController#index as TURBO_STREAM
 Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2026-04-11 01:58:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Bookers1'*/[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 16.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 01:58:12 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<th>本のタイトル</th>
+
+<th>内容</th>
+
+<% @books.each do |book| %>
+
+<p><%= book.title %></p>
+
+<p><%= book.body %></p>
+
+<th><%= link_to "Show", /books/#{book.id} %></th>
+<th>Edit</th>
+<th>Destroy</th>
+
+<% end %>
+
+
+
+<h2>新規投稿</h2>
+<%= form_with model: @book do |f| %>
+
+  <p>本のタイトル</p>
+  <%= f.text_field :title %>
+
+<p>内容</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit "本を投稿" %>
+
+<% end %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:14: syntax error, unexpected '<'
+<th>Edit</th>
+^
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:15: unknown regexp options - th
+<th>Destroy</th>
+            ^~~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:24: unknown regexp option - p
+  <p>本のタイトル</p>
+                        ^~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:33: unknown regexp options - vw
+...safe_append='<!-- END app/views/books/index.html.erb -->';@o...
+...                         ^~~~~~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:34: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<th>本のタイトル</th>
+
+<th>内容</th>
+
+<% @books.each do |book| %>
+
+<p><%= book.title %></p>
+
+<p><%= book.body %></p>
+
+<th><%= link_to "Show", /books/#{book.id} %></th>
+<th>Edit</th>
+<th>Destroy</th>
+
+<% end %>
+
+
+
+<h2>新規投稿</h2>
+<%= form_with model: @book do |f| %>
+
+  <p>本のタイトル</p>
+  <%= f.text_field :title %>
+
+<p>内容</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit "本を投稿" %>
+
+<% end %>
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <th>本のタイトル</th>
+4:    
+5:    <th>内容</th>
+6:    
+7:    <% @books.each do |book| %>
+8:    
+9:    <p><%= book.title %></p>
+10:    
+11:    <p><%= book.body %></p>
+12:    
+13:    <th><%= link_to "Show", /books/#{book.id} %></th>
+14:    <th>Edit</th>
+15:    <th>Destroy</th>
+16:    
+17:    <% end %>
+18:    
+19:    
+20:    
+21:    <h2>新規投稿</h2>
+22:    <%= form_with model: @book do |f| %>
+23:    
+24:      <p>本のタイトル</p>
+25:      <%= f.text_field :title %>
+26:    
+27:    <p>内容</p>
+28:      <%= f.text_area :body %>
+29:    
+30:      <%= f.submit "本を投稿" %>
+31:    
+32:    <% end %>
+  
+app/views/books/index.html.erb:14: syntax error, unexpected '<'
+app/views/books/index.html.erb:15: unknown regexp options - th
+app/views/books/index.html.erb:24: unknown regexp option - p
+app/views/books/index.html.erb:33: unknown regexp options - vw
+app/views/books/index.html.erb:34: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:14: syntax error, unexpected '<'
+<th>Edit</th>
+^
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:15: unknown regexp options - th
+<th>Destroy</th>
+            ^~~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:24: unknown regexp option - p
+  <p>本のタイトル</p>
+                        ^~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:33: unknown regexp options - vw
+...safe_append='<!-- END app/views/books/index.html.erb -->';@o...
+...                         ^~~~~~
+/home/ubuntu/environment/Bookers1/app/views/books/index.html.erb:34: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/books/index.html.erb:14: syntax error, unexpected '<'
+app/views/books/index.html.erb:15: unknown regexp options - th
+app/views/books/index.html.erb:24: unknown regexp option - p
+app/views/books/index.html.erb:33: unknown regexp options - vw
+app/views/books/index.html.erb:34: unterminated string meets end of file
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:00:35 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.6ms)
+Completed 200 OK in 24ms (Views: 8.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:00:37 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:18:in `show'
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:00:40 +0000
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-04-11 02:00:41 +0000
+Processing by BooksController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 139ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 54.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:00:46 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:18:in `show'
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:01:20 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `books' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:18:in `show'
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:01:57 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:18:in `show'
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:02:24 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 4.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:02:48 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 02:02:50 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:02:51 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 7.5ms | GC: 4.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 4.3ms)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.3ms)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2026-04-11 02:02:53 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.8ms)
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:02:56 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:05:58 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.3ms)
+Completed 200 OK in 21ms (Views: 4.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:21 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.9ms)
+Completed 200 OK in 26ms (Views: 5.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 5.2ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:24 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.6ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:25 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:26 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.3ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:27 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:06:28 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:11:48 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:51 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:53 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:54 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.6ms)
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:54 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.4ms)
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:11:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:26 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 9.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:14:28 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:30 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:14:30 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:31 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:32 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:33 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:14:33 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:14:34 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.8ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 1.3ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:34 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:14:35 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:14:35 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:16:33 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.1ms)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:16:35 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a873b230>)
+Caused by: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a873b230>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a873b230>):
+    3: <h2>内容:</h2>
+    4: <p><%= @book.body %></p>
+    5: 
+    6: <%= link_to "Edit", edit_path %>
+    7: <%= link_to "Back", books_path %>
+  
+app/views/books/show.html.erb:6
+
+Information for cause: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a873b230>):
+  
+app/views/books/show.html.erb:6
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:16:50 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:29:12 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a87d4b10>)
+Caused by: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a87d4b10>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a87d4b10>):
+    3: <h2>感想:</h2>
+    4: <p><%= @book.body %></p>
+    5: 
+    6: <%= link_to "Edit", edit_path %>
+    7: <%= link_to "Back", books_path %>
+  
+app/views/books/show.html.erb:6
+
+Information for cause: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a87d4b10>):
+  
+app/views/books/show.html.erb:6
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:34:09 +0000
+  
+SyntaxError (/home/ubuntu/environment/Bookers1/app/controllers/books_controller.rb:36: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/books_controller.rb:36: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:34:25 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a8d796b0>)
+Caused by: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a8d796b0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a8d796b0>):
+    3: <h2>感想:</h2>
+    4: <p><%= @book.body %></p>
+    5: 
+    6: <%= link_to "Edit", edit_path %>
+    7: <%= link_to "Back", books_path %>
+  
+app/views/books/show.html.erb:6
+
+Information for cause: NameError (undefined local variable or method `edit_path' for an instance of #<Class:0x00007860a8d796b0>):
+  
+app/views/books/show.html.erb:6
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:36:17 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.2ms)
+Completed 200 OK in 21ms (Views: 4.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:36:19 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿内容を編集</h1>
+
+<%= form_with model: @book do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+
+  <h4>感想</h4>
+    <%= f.text_field :body %>
+
+    <%= f.submit "更新" %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿内容を編集</h1>
+
+<%= form_with model: @book do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+
+  <h4>感想</h4>
+    <%= f.text_field :body %>
+
+    <%= f.submit "更新" %>
+):
+1:    <h1>投稿内容を編集</h1>
+2:    
+3:    <%= form_with model: @book do |f| %>
+4:    
+5:      <h4>本のタイトル</h4>
+6:      <%= f.text_field :title %>
+7:    
+8:      <h4>感想</h4>
+9:        <%= f.text_field :body %>
+10:    
+11:        <%= f.submit "更新" %>
+  
+app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+):
+  
+app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:36:20 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿内容を編集</h1>
+
+<%= form_with model: @book do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+
+  <h4>感想</h4>
+    <%= f.text_field :body %>
+
+    <%= f.submit "更新" %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿内容を編集</h1>
+
+<%= form_with model: @book do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+
+  <h4>感想</h4>
+    <%= f.text_field :body %>
+
+    <%= f.submit "更新" %>
+):
+1:    <h1>投稿内容を編集</h1>
+2:    
+3:    <%= form_with model: @book do |f| %>
+4:    
+5:      <h4>本のタイトル</h4>
+6:      <%= f.text_field :title %>
+7:    
+8:      <h4>感想</h4>
+9:        <%= f.text_field :body %>
+10:    
+11:        <%= f.submit "更新" %>
+  
+app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/Bookers1/app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+):
+  
+app/views/books/edit.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:37:11 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 1.3ms)
+Completed 200 OK in 25ms (Views: 7.6ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:37:27 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:37:27 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:37:29 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.3ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:37:30 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:37:31 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:37:33 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:37:33 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:37:34 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:37:40 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:37:41 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:38:21 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id])
+Caused by: ActionController::UrlGenerationError (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id])
+
+Information for: ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id]):
+    11: <p><%= book.body %></p>
+    12: 
+    13: <th><%= link_to "Show", book_path(book.id) %></th>
+    14: <th><%= link_to "Edit", edit_book_path(@book.id) %></th>
+    15: <th>Destroy</th>
+    16: 
+    17: <% end %>
+  
+app/views/books/index.html.erb:14
+app/views/books/index.html.erb:7
+
+Information for cause: ActionController::UrlGenerationError (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id]):
+  
+app/views/books/index.html.erb:14
+app/views/books/index.html.erb:7
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:38:22 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 2.3ms)
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:38:23 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:38:23 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:38:24 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id])
+Caused by: ActionController::UrlGenerationError (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id])
+
+Information for: ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id]):
+    11: <p><%= book.body %></p>
+    12: 
+    13: <th><%= link_to "Show", book_path(book.id) %></th>
+    14: <th><%= link_to "Edit", edit_book_path(@book.id) %></th>
+    15: <th>Destroy</th>
+    16: 
+    17: <% end %>
+  
+app/views/books/index.html.erb:14
+app/views/books/index.html.erb:7
+
+Information for cause: ActionController::UrlGenerationError (No route matches {:action=>"edit", :controller=>"books", :id=>nil}, missing required keys: [:id]):
+  
+app/views/books/index.html.erb:14
+app/views/books/index.html.erb:7
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:39:24 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.7ms)
+Completed 200 OK in 26ms (Views: 7.5ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:39:25 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:39:26 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:40:01 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:40:02 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 71ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:40:02 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:40:03 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:40:05 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:40:06 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:40:09 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:40:11 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:40:11 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 02:40:11 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/5" for 127.0.0.1 at 2026-04-11 02:40:13 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"すき"}, "commit"=>"更新", "id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/5
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 02:40:13 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:40:14 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2026-04-11 02:53:07 +0000
+  
+SyntaxError (/home/ubuntu/environment/Bookers1/app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/books/6/edit" for 127.0.0.1 at 2026-04-11 02:53:44 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.2ms)
+Completed 200 OK in 20ms (Views: 5.4ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started PATCH "/books/6" for 127.0.0.1 at 2026-04-11 02:53:46 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"バカとテストと召喚獣", "body"=>"おもしろい"}, "commit"=>"更新", "id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/6
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2026-04-11 02:53:46 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:53:47 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a86a5000>)
+Caused by: NoMethodError (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a86a5000>)
+
+Information for: ActionView::Template::Error (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a86a5000>):
+    12: 
+    13: <th><%= link_to "Show", book_path(book.id) %></th>
+    14: <th><%= link_to "Edit", edit_book_path(book.id) %></th>
+    15: <th><%= link_to "Destroy", destroy_book_path(book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></th>
+    16: 
+    17: <% end %>
+    18: 
+  
+app/views/books/index.html.erb:15
+app/views/books/index.html.erb:7
+
+Information for cause: NoMethodError (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a86a5000>):
+  
+app/views/books/index.html.erb:15
+app/views/books/index.html.erb:7
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:55:57 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | GC: 3.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 3.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a876a6e8>)
+Caused by: NoMethodError (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a876a6e8>)
+
+Information for: ActionView::Template::Error (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a876a6e8>):
+    12: 
+    13: <th><%= link_to "Show", book_path(book.id) %></th>
+    14: <th><%= link_to "Edit", edit_book_path(book.id) %></th>
+    15: <th><%= link_to "Destroy", destroy_book_path(@book.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"} %></th>
+    16: 
+    17: <% end %>
+    18: 
+  
+app/views/books/index.html.erb:15
+app/views/books/index.html.erb:7
+
+Information for cause: NoMethodError (undefined method `destroy_book_path' for an instance of #<Class:0x00007860a876a6e8>):
+  
+app/views/books/index.html.erb:15
+app/views/books/index.html.erb:7
+Started GET "/books" for 127.0.0.1 at 2026-04-11 02:58:32 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started DELETE "/books/6?_method=delete" for 127.0.0.1 at 2026-04-11 03:07:29 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+  [1m[36mBook Destroy (1.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 6 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 20ms (ActiveRecord: 5.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:07:29 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2026-04-11 03:07:31 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 03:07:31 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.1ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 03:07:33 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.7ms)
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2026-04-11 03:07:33 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/5?_method=delete" for 127.0.0.1 at 2026-04-11 03:07:35 +0000
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 5 LIMIT 1 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+  [1m[36mBook Destroy (0.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 5 /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:33:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:07:35 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.5ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 03:07:49 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"タイトルが長い"}, "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド', 'タイトルが長い', '2026-04-11 03:07:49.329277', '2026-04-11 03:07:49.329277') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:07:49 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:07:54 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:07:55 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/7" for 127.0.0.1 at 2026-04-11 03:07:56 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"タイトルが長い"}, "commit"=>"更新", "id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/7
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:07:57 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:07:58 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:07:58 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.4ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:08:00 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:08:00 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:08:02 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 10.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 19.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:08:03 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:08:08 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:08:09 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:18:17 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:7
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:40:41 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.7ms)
+Completed 200 OK in 26ms (Views: 6.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 5.9ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:41 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:40:42 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:40:42 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.2ms)
+Completed 200 OK in 14ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:40:42 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/7" for 127.0.0.1 at 2026-04-11 03:40:44 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"タイトルが長い"}, "commit"=>"更新", "id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/7
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:44 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 2.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:40:44 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 1.1ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:46 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:40:46 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:40:54 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:55 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:56 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:40:58 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.7ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:40:59 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:41:00 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:42:09 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 6.1ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:44:55 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.1ms)
+Completed 200 OK in 21ms (Views: 6.1ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:46:06 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 6.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2026-04-11 03:46:27 +0000
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"book"=>{"title"=>"落第騎士の英雄譚", "body"=>"死ぬほど好き"}, "authenticity_token"=>"[FILTERED]", "commit"=>"本を投稿"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (5.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES ('落第騎士の英雄譚', '死ぬほど好き', '2026-04-11 03:46:27.689216', '2026-04-11 03:46:27.689216') RETURNING "id" /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 21ms (ActiveRecord: 9.0ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:46:27 +0000
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/8" for 127.0.0.1 at 2026-04-11 03:46:35 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:46:35 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:46:37 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 03:46:38 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started PATCH "/books/7" for 127.0.0.1 at 2026-04-11 03:46:39 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ソードアートオンライン　オルタナティブ　ガンゲイルオンライン　バレッドオブバレッド", "body"=>"タイトルが長い"}, "commit"=>"更新", "id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:3000/books/7
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 03:46:39 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:46:40 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 3.2ms)
+Completed 200 OK in 18ms (Views: 7.5ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+Started GET "/books/8/edit" for 127.0.0.1 at 2026-04-11 03:46:41 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.0ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 3.3ms)
+Completed 200 OK in 19ms (Views: 5.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-11 03:46:59 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.3ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 1.8ms)
+Completed 200 OK in 15ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:47:03 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 10.0ms | GC: 7.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 10.2ms)
+Completed 200 OK in 25ms (Views: 14.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 12.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:49:42 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.1ms)
+Completed 200 OK in 21ms (Views: 6.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:52:16 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.7ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:54:40 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.3ms)
+Completed 200 OK in 23ms (Views: 7.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/books/8" for 127.0.0.1 at 2026-04-11 03:54:46 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/8/edit" for 127.0.0.1 at 2026-04-11 03:54:46 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/books/8" for 127.0.0.1 at 2026-04-11 03:54:59 +0000
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"落第騎士の英雄譚", "body"=>"今まで読んできたライトノベルの中で一番好き"}, "commit"=>"更新", "id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "body" = '今まで読んできたライトノベルの中で一番好き', "updated_at" = '2026-04-11 03:54:59.793948' WHERE "books"."id" = 8 /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in `update'
+Redirected to http://127.0.0.1:3000/books/8
+Completed 302 Found in 18ms (ActiveRecord: 4.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/8" for 127.0.0.1 at 2026-04-11 03:54:59 +0000
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 03:55:01 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 18.3ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | GC: 0.2ms)
+Completed 200 OK in 63ms (Views: 23.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 03:57:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 04:02:13 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.7ms)
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 04:02:14 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 3.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2026-04-11 04:04:37 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Bookers1',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.7ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 04:04:43 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2026-04-11 04:04:43 +0000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='edit',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-11 04:04:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/books/8" for 127.0.0.1 at 2026-04-11 04:04:47 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 8 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2026-04-11 04:04:48 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Bookers1',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
